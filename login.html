@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Sign in · TindahanTrack</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login">
+  <main class="login-card">
+    <h1>TindahanTrack</h1>
+    <p class="sub">Benta, Bantay, Bilang — Lahat Nasa Isang Lugar.</p>
+
+    <form id="loginForm" class="form">
+      <label>Email<input name="email" type="email" required autocomplete="username"></label>
+      <label>Password<input name="password" type="password" required autocomplete="current-password"></label>
+      <button class="btn full" type="submit">Sign in</button>
+    </form>
+
+    <form id="newPwForm" class="form" hidden>
+      <label>New password (at least 8 characters)<input name="pw" type="password" minlength="8" required autocomplete="new-password"></label>
+      <button class="btn full" type="submit">Save new password</button>
+    </form>
+
+    <button class="btn ghost full" id="forgotBtn" type="button" style="margin-top:10px">Forgot password?</button>
+    <p id="msg" class="msg" role="status"></p>
+    <p class="muted" style="font-size:12px">Administrator accounts only. There is no public sign-up.</p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.0/dist/umd/supabase.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
